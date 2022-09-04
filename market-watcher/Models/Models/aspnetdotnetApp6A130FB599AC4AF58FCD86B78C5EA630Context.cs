@@ -33,6 +33,11 @@ namespace Models.Models
             {
                 entity.HasNoKey();
 
+                entity.Property(e => e.ApiStatus)
+                    .HasMaxLength(255)
+                    .IsUnicode(false)
+                    .HasColumnName("Api_Status");
+
                 entity.Property(e => e.Name)
                     .HasMaxLength(255)
                     .IsUnicode(false);

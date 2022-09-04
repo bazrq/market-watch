@@ -1,4 +1,7 @@
-﻿namespace DataService
+﻿using Models.Models;
+using DataService;
+
+namespace DataService
 {
     public class MainService
     {
@@ -6,5 +9,6 @@
         {
             return true;
         }
+
     }
 }
