@@ -43,10 +43,16 @@ namespace Web.Api.Controllers
             
         }
 
-        [HttpGet("GetSiteInfo")]
-        public List<TradingSite> GetSiteInfo()
+        [HttpGet("GetAllSiteInfo")]
+        public List<TradingSite> GetAllSiteInfo()
         {
             return _mainService.SiteInfo();
+        }
+
+        [HttpPost]
+        public string ApiStatus(string siteName)
+        {
+            return _mainService.ApiStatus(siteName);
         }
     }
 }

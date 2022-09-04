@@ -1,6 +1,8 @@
 ﻿using Models.Models;
 using IDataService;
 using IDataAccess;
+using System.Linq;
+using System.Net;
 
 namespace DataService
 {
@@ -22,5 +24,38 @@ namespace DataService
         {
             return _mainDataAccess.SiteInfo();
         }
+
+        public string ApiStatus(string siteName)
+        {
+            var url = "";
+            foreach(var item in SiteInfo())
+            {
+                
+                if (item.Name == siteName)
+                {
+                    url = item.ApiStatus;
+                    break;
+                }
+
+                return "Invalid Site";
+                                
+            }
+
+            HttpCallAsync(url);
+
+
+
+            return "mkaing call to:"+url;
+        }
+
+        public async Task<HttpResponseMessage> HttpCallAsync(string url)
+        {
+            using var client = new HttpClient();
+
+            var result = await client.GetAsync(url);
+
+            return result;
+        }
+
     }
 }

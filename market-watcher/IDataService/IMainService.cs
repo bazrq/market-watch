@@ -12,5 +12,7 @@ namespace IDataService
         public bool Test();
 
         public List<TradingSite> SiteInfo();
+
+        public string ApiStatus(string siteName);
     }
 }
