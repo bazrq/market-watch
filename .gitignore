@@ -1,6 +1,6 @@
 *.suo
 *.user
 _ReSharper.*
-./market-watcher/*bin
-./market-watcher/*obj
+./*bin
+./*obj
 packages
