@@ -8,6 +8,11 @@ namespace DataService
     {
         private readonly IMainDataAccess _mainDataAccess;
 
+        public MainService(IMainDataAccess _mainDataAccess)
+        {
+            this._mainDataAccess = _mainDataAccess;
+        }
+
         public bool Test()
         {
             return true;

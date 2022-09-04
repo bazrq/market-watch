@@ -1,4 +1,6 @@
 using DataService;
+using IDataAccess;
+using DataAccess;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,7 +21,9 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 
-builder.Services.AddTransient<MainService, MainService>();
+builder.Services.AddScoped<MainService, MainService>();
+builder.Services.AddScoped<IMainDataAccess, MainDataAccess>();
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
