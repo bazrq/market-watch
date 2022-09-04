@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using DataService;
+using IDataService;
+using Models.Models;
 
 namespace Web.Api.Controllers
 {
@@ -13,13 +15,13 @@ namespace Web.Api.Controllers
     };
 
         private readonly ILogger<WeatherForecastController> _logger;
-        private readonly MainService mainService;
+        private readonly IMainService _mainService;
 
 
         public WeatherForecastController(ILogger<WeatherForecastController> logger, MainService mainService)
         {
             _logger = logger;
-            this.mainService = mainService;
+            this._mainService = mainService;
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
@@ -37,8 +39,14 @@ namespace Web.Api.Controllers
         [HttpGet("Test")]
         public bool Test()
         {
-            return mainService.Test();
+            return _mainService.Test();
             
+        }
+
+        [HttpGet("GetSiteInfo")]
+        public List<TradingSite> GetSiteInfo()
+        {
+            return _mainService.SiteInfo();
         }
     }
 }

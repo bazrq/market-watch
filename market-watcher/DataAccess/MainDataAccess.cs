@@ -1,10 +1,11 @@
-﻿using Models;
+﻿using IDataAccess;
+using Models;
 using Models.Models;
 
 namespace DataAccess
 
 {
-    public class MainDataAccess
+    public class MainDataAccess : IMainDataAccess
     {
         public List<TradingSite> SiteInfo()
         {

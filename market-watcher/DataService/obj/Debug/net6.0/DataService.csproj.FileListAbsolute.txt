@@ -13,3 +13,7 @@ D:\projects\market-watcher\market-watcher\DataService\obj\Debug\net6.0\ref\DataS
 D:\projects\market-watcher\market-watcher\DataService\bin\Debug\net6.0\Models.dll
 D:\projects\market-watcher\market-watcher\DataService\bin\Debug\net6.0\Models.pdb
 D:\projects\market-watcher\market-watcher\DataService\obj\Debug\net6.0\DataService.csproj.CopyComplete
+D:\projects\market-watcher\market-watcher\DataService\bin\Debug\net6.0\IDataAccess.dll
+D:\projects\market-watcher\market-watcher\DataService\bin\Debug\net6.0\IDataService.dll
+D:\projects\market-watcher\market-watcher\DataService\bin\Debug\net6.0\IDataAccess.pdb
+D:\projects\market-watcher\market-watcher\DataService\bin\Debug\net6.0\IDataService.pdb

@@ -1,14 +1,21 @@
 ﻿using Models.Models;
-using DataService;
+using IDataService;
+using IDataAccess;
 
 namespace DataService
 {
-    public class MainService
+    public class MainService : IMainService
     {
+        private readonly IMainDataAccess _mainDataAccess;
+
         public bool Test()
         {
             return true;
         }
 
+        public List<TradingSite> SiteInfo()
+        {
+            return _mainDataAccess.SiteInfo();
+        }
     }
 }

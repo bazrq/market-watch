@@ -881,6 +881,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "IDataAccess": "1.0.0",
+          "IDataService": "1.0.0",
           "Models": "1.0.0"
         },
         "compile": {
@@ -888,6 +890,32 @@
         },
         "runtime": {
           "bin/placeholder/DataService.dll": {}
+        }
+      },
+      "IDataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/IDataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/IDataAccess.dll": {}
+        }
+      },
+      "IDataService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/IDataService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/IDataService.dll": {}
         }
       },
       "Models/1.0.0": {
@@ -2335,6 +2363,16 @@
       "path": "../DataService/DataService.csproj",
       "msbuildProject": "../DataService/DataService.csproj"
     },
+    "IDataAccess/1.0.0": {
+      "type": "project",
+      "path": "../IDataAccess/IDataAccess.csproj",
+      "msbuildProject": "../IDataAccess/IDataAccess.csproj"
+    },
+    "IDataService/1.0.0": {
+      "type": "project",
+      "path": "../IDataService/IDataService.csproj",
+      "msbuildProject": "../IDataService/IDataService.csproj"
+    },
     "Models/1.0.0": {
       "type": "project",
       "path": "../Models/Models.csproj",
@@ -2344,6 +2382,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "DataService >= 1.0.0",
+      "IDataService >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.8",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.8",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.8",
@@ -2380,6 +2419,9 @@
           "projectReferences": {
             "D:\\projects\\market-watcher\\market-watcher\\DataService\\DataService.csproj": {
               "projectPath": "D:\\projects\\market-watcher\\market-watcher\\DataService\\DataService.csproj"
+            },
+            "D:\\projects\\market-watcher\\market-watcher\\IDataService\\IDataService.csproj": {
+              "projectPath": "D:\\projects\\market-watcher\\market-watcher\\IDataService\\IDataService.csproj"
             }
           }
         }
