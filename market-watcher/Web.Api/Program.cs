@@ -1,6 +1,7 @@
 using DataService;
 using IDataAccess;
 using DataAccess;
+using IDataService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,7 +22,7 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 
-builder.Services.AddScoped<MainService, MainService>();
+builder.Services.AddScoped<IMainService, MainService>();
 builder.Services.AddScoped<IMainDataAccess, MainDataAccess>();
 
 builder.Services.AddControllers();

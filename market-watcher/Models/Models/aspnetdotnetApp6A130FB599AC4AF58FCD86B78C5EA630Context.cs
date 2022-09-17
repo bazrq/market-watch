@@ -38,6 +38,11 @@ namespace Models.Models
                     .IsUnicode(false)
                     .HasColumnName("Api_Status");
 
+                entity.Property(e => e.ApiV2Status)
+                    .HasMaxLength(255)
+                    .IsUnicode(false)
+                    .HasColumnName("ApiV2_Status");
+
                 entity.Property(e => e.Name)
                     .HasMaxLength(255)
                     .IsUnicode(false);
